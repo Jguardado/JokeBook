@@ -12,7 +12,7 @@ import UIKit
 
 class JokeViewController: UIViewController {
     
-    var joke = ""
+    var joke = Joke()
     var question = ""
     var answer = ""
     
@@ -20,19 +20,20 @@ class JokeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = joke
+        title = joke.name
+        jokeLabel.text = joke.content
         
-        if joke == "harry potter" {
-            jokeLabel.text = "What did Harry Potter do when he found the three-headed dog? \n\n He ran... wouldn't you?"
-        }
-            
-        if joke == "gummy" {
-            jokeLabel.text = "Q: Why did the chewing gum cross the road? \n\n A: He was stuck to the chicken's foot."
-        }
-            
-        if joke == "ram" {
-            jokeLabel.text = "Q; Why did the ram fall off the cliff? \n\n A: Because he didn't see the ewe turn."
-        }
+//        if joke == "harry potter" {
+//            jokeLabel.text = "What did Harry Potter do when he found the three-headed dog? \n\n He ran... wouldn't you?"
+//        }
+//
+//        if joke == "gummy" {
+//            jokeLabel.text = "Q: Why did the chewing gum cross the road? \n\n A: He was stuck to the chicken's foot."
+//        }
+//
+//        if joke == "ram" {
+//            jokeLabel.text = "Q; Why did the ram fall off the cliff? \n\n A: Because he didn't see the ewe turn."
+//        }
         
         
     }
